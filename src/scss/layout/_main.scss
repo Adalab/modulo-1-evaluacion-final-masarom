@@ -22,3 +22,44 @@
         padding-top: 10px;
     }
 }
+
+.main__tips {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: $margin;
+    padding-right: $margin;
+    .article__upper-text {
+        color: $light_blue;
+        font-size: $text_small;
+        padding-top: 45px;
+        padding-bottom: 10px;
+    }
+    .article__title{
+        color: $title_black;
+        font-family: $title_font_family;
+        font-size: $title_mobile;
+        line-height: 1.25;
+    }
+    .article__content {
+        color: $greyish_brown;
+        font-size: $text_mobile;
+        padding-top: $margin;
+        line-height: 1.67;
+    }
+    .tips__button {
+        width: 76px;
+        padding: 12px 0;
+        color: $button_orange_color;
+        font-size: 2rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        text-decoration: none;
+        text-align: center; 
+        border: 3px solid $button_orange_color;
+        border-radius: 25px;
+        margin-top: 30px;
+        margin-bottom: 45px;
+    }
+}
