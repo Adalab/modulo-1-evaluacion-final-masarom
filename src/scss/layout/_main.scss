@@ -3,19 +3,22 @@
 .main__hero {
     height: 100vh;
     width: 100%;
+    display: flex;
     background-blend-mode: multiply;
     background-image: url(../images/cover.jpg), linear-gradient(to bottom, $white_half_opacity 25%, $black_half_opacity);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     .main__container {
-        height: 100%;
         width: 100%;
         display: flex;
         flex-flow: column;
-        justify-content: flex-start;
+        justify-content: flex-end;
         align-items: center;
-        transform: translateY(50.5%);
+        @media all and (min-width:1280px) {
+                width: 730px;
+                margin: 0 auto;
+            }
     }
     .hero__title {
         font-family: $title_font_family;
@@ -24,7 +27,12 @@
         line-height: 1.3;
         text-align: center;
         text-transform: uppercase;
-        
+        @media all and (min-width: 768px) {
+            font-size: 8rem;
+        }
+        @media all and (min-width:1280px) {
+            font-size: 10rem;
+        }
     }
     .hero__subtitle {
         font-size: $text_footer;
@@ -32,15 +40,18 @@
         color: $white;
         padding-top: 15px;
         margin-bottom: 45px;
+        @media all and (min-width: 768px) {
+            font-size: $title_3_text_tablet_desktop;
+        }
     }
     .fa-chevron-down {
-        
         color: $button_orange_color;
         background-color: $white;
         border-radius: 50%;
         width: 25px;
         height: 25px;
         padding: 10px;
+        margin-bottom: 53px;
     }
 }
 
@@ -51,29 +62,54 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    padding-left: $margin;
-    padding-right: $margin;
+    margin-left: $margin;
+    margin-right: $margin;
+    @media all and (min-width:768px) {
+        margin-left: 39px;
+        margin-right: 39px;
+    }
+    @media all and (min-width:1280px) {
+        width: 730px;
+        margin: 0 auto;
+    }
     .article__upper-text {
         color: $light_blue;
         font-size: $text_small;
         padding-top: 45px;
         padding-bottom: 10px;
+        @media all and (min-width: 768px) {
+            line-height: 2.14;
+        }
+        @media all and (min-width:1280px) {
+            font-size: 1.6rem;
+        }
     }
     .article__title{
         color: $title_black;
         font-family: $title_font_family;
         font-size: $main_title_mobile;
         line-height: 1.25;
+        @media all and (min-width:768px) {
+            font-size: $title_2_tablet;
+            line-height: 1.73;
+        }
+        @media all and (min-width:1280px) {
+            font-size: $title_desktop;
+        }
     }
     .article__content {
         color: $greyish_brown;
         font-size: $text_mobile;
         padding-top: 15px;
         line-height: 1.67;
+        @media all and (min-width: 768px){
+            font-size: $text_tablet;
+            line-height: 1.5;
+        }
     }
     .tips__button {
         width: 76px;
-        padding: 12px 0;
+        padding: 10px 0;
         color: $button_orange_color;
         font-size: 2rem;
         font-weight: 500;
@@ -84,6 +120,12 @@
         border-radius: 25px;
         margin-top: 30px;
         margin-bottom: 45px;
+        @media all and (min-width:768px) {
+            width: 91px;
+        }
+        @media all and (min-width:1280px) {
+            width: 160px;
+        }
     }
 }
 
@@ -98,11 +140,19 @@
         padding-right: $margin;
         margin-top: 30px;
         text-align: center;
+        @media all and (min-width:768px) {
+            font-size: $title_2_tablet;
+            line-height: 1.73;
+        }
+        @media all and (min-width:1280px) {
+            font-size: $title_desktop;
+        }
+
     }
     .grid__item {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         color: $title_black;
     }
@@ -113,6 +163,10 @@
         text-align: center;
         line-height: 1.67;
         margin-top: 45px;
+        @media all and (min-width: 768px) {
+            font-size: $title_3_text_tablet_desktop;
+            line-height: 1.25;
+        }
     }
     .grid__text{
         font-size: $title_mobile;
@@ -121,6 +175,11 @@
         padding-left: $margin;
         padding-right: $margin;
         width: 62%;
+        @media all and (min-width:768px) {
+            font-size: $text_tablet;
+            line-height: 1.5;
+            width: 85%;
+        }
     }
 
     .reasons__button {
@@ -137,6 +196,12 @@
         border-radius: 25px;
         width: 184px;
         margin: 45px auto 60px auto;
+        @media all and (min-width:768px) {
+            width:210px;
+        }
+        @media all and (min-width:1280px) {
+            width: 255px;
+        }
     }
 }
 .reasons__grid {
@@ -156,6 +221,9 @@
             @media all and (min-width:768px) {
                 grid-column: span 1;
             }
+        }
+        @media all and (min-width:1280px) {
+            margin: 0 85px;
         }
     }
     .reasons__button {
