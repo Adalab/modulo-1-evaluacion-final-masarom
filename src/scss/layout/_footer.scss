@@ -9,8 +9,8 @@
         background-color: $white;
         border-radius: 50%;
         padding: 10px;
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
         transform: translateY(-50%);
     }
     .footer__menu, .footer__socials {
@@ -23,7 +23,7 @@
             color: white;
             text-transform: uppercase;
             text-decoration: none;
-            font-size: $text_small;
+            font-size: $text_footer;
         }
     }
     .copyright {
