@@ -2,15 +2,15 @@
     position: fixed;
     z-index: 1;
     background-color: $button_blue_color;
-    width: 4.4rem;
-    height: 4.4rem;
+    width: 5.4rem;
+    height: 5.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     .fa-bars {
         color: $white;
-        width: 14px;
-        height: 14px;
+        width: 24px;
+        height: 24px;
     }
 }
 
