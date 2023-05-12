@@ -2,7 +2,23 @@
     height: 100vh;
     width: 100%;
     background-image: url(../images/cover.jpg);
-    object-fit: cover;
+    background-position: top;
     background-repeat: no-repeat;
-    background-size: auto;   
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    .hero__title {
+        font-family: $title_font_family;
+        color: $white;
+        font-size: 4.2rem;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .hero__subtitle {
+        font-size: 1.6rem;
+        color: $white;
+        padding-top: 10px;
+    }
 }
