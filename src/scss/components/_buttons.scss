@@ -3,6 +3,12 @@
     width: 25px;
     height: 25px;
     padding: 10px;
+    &:hover {
+        animation-name: swing;
+        animation-duration: 0.5s;
+        animation-fill-mode: backwards;
+        
+    }
 }
 
 /* footer menus */

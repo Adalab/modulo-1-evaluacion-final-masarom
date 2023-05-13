@@ -20,11 +20,10 @@
         }
     }
     .fa-arrow-up {
-        @include jump-button;
-        
         background-color: $white;
         border-radius: 50%;
         transform: translateY(-50%);
+        @include jump-button;
     }
 
     .footer__menu {
