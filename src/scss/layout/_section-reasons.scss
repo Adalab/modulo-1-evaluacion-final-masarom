@@ -1,0 +1,86 @@
+/* section 3: reasons */
+.main__reasons {
+    background-color: $background_ice_blue;
+
+    .reasons__title {
+        font-family: $font_family_title;
+        font-size: $fs-h2;
+        font-weight: bold;
+        padding-left: $margin;
+        padding-right: $margin;
+        margin-top: 30px;
+        text-align: center;
+
+        @include tablet {
+            font-size: $fs-h2-tablet;
+            line-height: $lh-bigger;
+        }
+
+        @include desktop {
+            font-size: $fs-h2-desktop;
+        }
+
+    }
+
+    .grid__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        color: $title_black;
+    }
+
+    .grid__title {
+        font-family: $font_family_title;
+        font-weight: bold;
+        font-size: $fs-h3;
+        text-align: center;
+        line-height: $lh-base;
+        margin-top: $margin-bigger-2;
+
+        @include tablet {
+            font-size: $fs-h3-tablet;
+            line-height: $lh-smallest;
+        }
+    }
+
+    .grid__text {
+        font-size: $fs-base;
+        line-height: $lh-base;
+        text-align: center;
+        padding-left: $margin;
+        padding-right: $margin;
+        width: 62%;
+
+        @include tablet {
+            font-size: $fs-base-tablet;
+            line-height: $lh-smaller;
+            width: 85%;
+        }
+    }
+
+    .reasons__button {
+        &:first-letter {
+            text-transform: capitalize;
+        }
+
+        color: $white;
+        font-size: 2rem;
+        font-weight: 500;
+        text-align: center;
+        line-height: 2.25;
+        text-decoration: none;
+        background-color: $button_orange_color;
+        border-radius: 25px;
+        width: 184px;
+        margin: $margin-bigger-2 auto 60px auto;
+
+        @include tablet {
+            width: 210px;
+        }
+
+        @include desktop {
+            width: 255px;
+        }
+    }
+}

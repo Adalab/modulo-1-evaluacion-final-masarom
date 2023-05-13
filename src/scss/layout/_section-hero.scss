@@ -1,0 +1,61 @@
+/* section 1: hero */
+
+.main__hero {
+    background-blend-mode: multiply;
+    background-image: url(../images/cover.jpg), linear-gradient(to bottom, $white_half_opacity 25%, $black_half_opacity);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+
+    .container {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        @include desktop {
+            width: $width-desktop;
+            margin: 0 auto;
+        }
+    }
+
+    .hero__title {
+        font-family: $font_family_title;
+        color: $white;
+        font-size: 4.2rem;
+        line-height: $lh-smaller-2;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include tablet {
+            font-size: 8rem;
+        }
+
+        @include desktop {
+            font-size: 10rem;
+        }
+    }
+
+    .hero__subtitle {
+        font-size: $fs-smaller;
+        text-align: center;
+        color: $white;
+        padding-top: 15px;
+        margin-bottom: $margin-bigger-2;
+
+        @include tablet {
+            font-size: $fs-h3-tablet;
+        }
+    }
+
+    .fa-chevron-down {
+        @include jump-button;
+        background-color: $white;
+        border-radius: 50%;
+        margin-bottom: 53px;
+    }
+}

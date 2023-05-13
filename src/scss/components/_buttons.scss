@@ -1,0 +1,27 @@
+@mixin jump-button {
+    color: $button_orange_color;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+}
+
+/* footer menus */
+
+@mixin footer-menu {
+    margin-bottom: 30px;
+    .list__item {
+        padding-top: 14px;
+        text-align: center;
+
+        @include tablet {
+            text-align: left;
+        }
+    }
+    a {
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: $fs-smaller;
+
+    }
+}

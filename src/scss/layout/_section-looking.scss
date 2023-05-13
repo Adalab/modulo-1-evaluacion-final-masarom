@@ -1,0 +1,86 @@
+/* section 2: looking through a window */
+
+.main__tips {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-left: $margin;
+    margin-right: $margin;
+
+    @include tablet {
+        margin-left: $margin-bigger;
+        margin-right: $margin-bigger;
+    }
+
+    @include desktop {
+        width: $width-desktop;
+        margin: 0 auto;
+    }
+
+    .article__upper-text {
+        color: $light_blue;
+        font-size: $fs-smaller;
+        padding-top: $margin-bigger-2;
+        padding-bottom: 10px;
+
+        @include tablet {
+            line-height: 2.14;
+        }
+
+        @include desktop {
+            font-size: $fs-smaller;
+        }
+    }
+
+    .article__title {
+        color: $title_black;
+        font-family: $font_family_title;
+        font-size: $fs-h2;
+        line-height: $lh-smallest;
+
+        @include tablet {
+            font-size: $fs-h2-tablet;
+            line-height: $lh-bigger;
+        }
+
+        @include desktop {
+            font-size: $fs-h2-desktop;
+        }
+    }
+
+    .article__content {
+        color: $greyish_brown;
+        font-size: $fs-base;
+        padding-top: 15px;
+        line-height: $lh-base;
+
+        @include tablet {
+            font-size: $fs-base-tablet;
+            line-height: $lh-smaller;
+        }
+    }
+
+    .tips__button {
+        width: 76px;
+        padding: 10px 0;
+        color: $button_orange_color;
+        font-size: 2rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        text-decoration: none;
+        text-align: center;
+        border: 3px solid $button_orange_color;
+        border-radius: 25px;
+        margin-top: 30px;
+        margin-bottom: $margin-bigger-2;
+
+        @include tablet {
+            width: 91px;
+        }
+
+        @include desktop {
+            width: 160px;
+        }
+    }
+}

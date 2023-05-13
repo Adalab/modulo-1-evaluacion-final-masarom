@@ -1,6 +1,11 @@
+@import 'core/mixins';
 @import 'core/variables';
 @import 'core/reset';
+@import 'components/buttons';
 @import 'layout/header';
-@import 'layout/main';
+@import 'layout/section-hero';
+@import 'layout/section-looking';
+@import 'layout/section-reasons';
+@import 'layout/section-reasons-grid';
 @import 'layout/footer';
 
