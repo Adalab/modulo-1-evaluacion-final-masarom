@@ -19,11 +19,18 @@
             width: $width-desktop;
         }
     }
+    .arrow__up {
+        transform: translateY(-50%);
+    }
     .fa-arrow-up {
         background-color: $white;
         border-radius: 50%;
-        transform: translateY(-50%);
         @include jump-button;
+        &:hover {
+                animation-name: swing;
+                animation-duration: 0.5s;
+                animation-fill-mode: backwards;
+            }
     }
 
     .footer__menu {

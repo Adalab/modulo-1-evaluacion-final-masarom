@@ -74,6 +74,7 @@
         border-radius: 25px;
         margin-top: 30px;
         margin-bottom: $margin-bigger-2;
+        @include transition($button_orange_color, $white);
 
         @include tablet {
             width: 91px;

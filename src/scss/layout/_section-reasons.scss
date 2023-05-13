@@ -71,14 +71,16 @@
         line-height: 2.25;
         text-decoration: none;
         background-color: $button_orange_color;
+        border: 3px solid $button_orange_color;
         border-radius: 25px;
-        width: 184px;
+        width: 176px;
         margin: $margin-bigger-2 auto 60px auto;
-
+        @include transition ($background_ice_blue, $button_orange_color) {
+            border: 3px solid $button_orange_color;
+        }
         @include tablet {
             width: 210px;
         }
-
         @include desktop {
             width: 255px;
         }
