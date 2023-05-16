@@ -1,40 +1,45 @@
 @mixin jump-button {
-    color: $button_orange_color;
-    width: 25px;
-    height: 25px;
-    padding: 10px;
+  color: $button_orange_color;
+  width: 25px;
+  height: 25px;
+  padding: 10px;
 }
 /* transition */
 @mixin transition($end-color, $start-color) {
-    /* He intentado hacer un relleno de izquierda a derecha, y aunque ha salido no lo entiendo bien. */
-    background: linear-gradient(to right, $end-color 50%, $start-color 50%);
-    background-size: 200% 100%;
-    background-position: right;
-    transition: ease-out 0.5s;
-    &:hover {
-        color: $start-color;
-        background-position: left;
-        @content;
-    }
+  /* para hacer que los colores de fondo no se mezclen y aparezcan uno despúes de otro.*/
+  background: linear-gradient(to right, $end-color 50%, $start-color 50%);
+  /* añadimos al ancho el doble de lo normal para que extienda los colores a todo el elemento (si no, quedan divididos por la mitad para cada color en el elemento) */
+  background-size: 200% 100%;
+  /* fuera de hover, queremos que aparezca sólo el color inicial, para ello posicionamos el background a la derecha (desplaza el 50% del color final par que no se vea */
+  background-position: right;
+  /* añadimos una transición para que quede más fluido */
+  transition: ease-out 0.5s;
+  &:hover {
+    /* indicamos el color de la fuente cuando se activa el hover */
+    color: $start-color;
+    /* reposicionamos el background para que ahora aparezca a la izquierda, es decir, tome el color final cuando se hace hover*/
+    background-position: left;
+    /* añadimos contenido adicional personalizado a cada botón */
+    @content;
+  }
 }
 
 /* footer menus */
 
 @mixin footer-menu {
-    margin-bottom: 30px;
-    .list__item {
-        padding-top: 14px;
-        text-align: center;
+  margin-bottom: 30px;
+  .list__item {
+    padding-top: 14px;
+    text-align: center;
 
-        @include tablet {
-            text-align: left;
-        }
+    @include tablet {
+      text-align: left;
     }
-    a {
-        color: white;
-        text-transform: uppercase;
-        text-decoration: none;
-        font-size: $fs-smaller;
-
-    }
+  }
+  a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: $fs-smaller;
+  }
 }

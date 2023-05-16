@@ -1,69 +1,69 @@
 .footer {
-    background-color: $background_grey_blue;
+  background-color: $background_grey_blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .footer__container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .footer__container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        @include tablet {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: flex-start;
-                width: 100%;
-            }
-        @include desktop {
-            width: $width-desktop;
-        }
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
     }
-    .arrow__up {
-        transform: translateY(-50%);
+    @include desktop {
+      width: $width-desktop;
     }
-    .fa-arrow-up {
-        background-color: $white;
-        border-radius: 50%;
-        @include jump-button;
-        &:hover {
-                animation-name: swing;
-                animation-duration: 0.5s;
-                animation-fill-mode: backwards;
-            }
+  }
+  .arrow__up {
+    transform: translateY(-50%);
+  }
+  .fa-arrow-up {
+    background-color: $white;
+    border-radius: 50%;
+    @include jump-button;
+    &:hover {
+      animation-name: swing;
+      animation-duration: 0.5s;
+      animation-fill-mode: backwards;
     }
+  }
 
-    .footer__menu {
-        @include footer-menu;
-        @include tablet {
-            order: 2;
-            width: 23%;
-        }
+  .footer__menu {
+    @include footer-menu;
+    @include tablet {
+      order: 2;
+      width: 23%;
     }
-    .footer__socials{
-        @include footer-menu;
-        @include tablet {
-            order: 3;
-            margin-right: $margin-bigger;
-            width: 23%;
-        }
+  }
+  .footer__socials {
+    @include footer-menu;
+    @include tablet {
+      order: 3;
+      margin-right: $margin-bigger;
+      width: 23%;
     }
-    .copyright {
-        color: $white;
-        text-align: center;
-        font-size: $fs-smaller;
-        line-height: 2.14;
-        .copyright__sentence{
-            margin-bottom: $margin-bigger-2;
-            .fa-heart {
-                color: $button_orange_color;
-                font-size: 1.2rem;
-            }
-        }
-        @include tablet {
-            order:1;
-            margin-left: $margin-bigger;
-            text-align: left;
-        }
+  }
+  .copyright {
+    color: $white;
+    text-align: center;
+    font-size: $fs-smaller;
+    line-height: 2.14;
+    .copyright__sentence {
+      margin-bottom: $margin-bigger-2;
+      .fa-heart {
+        color: $button_orange_color;
+        font-size: 1.2rem;
+      }
     }
+    @include tablet {
+      order: 1;
+      margin-left: $margin-bigger;
+      text-align: left;
+    }
+  }
 }

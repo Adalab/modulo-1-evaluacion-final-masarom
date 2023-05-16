@@ -1,33 +1,33 @@
 /* section 3: reasons grid */
 .reasons__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr, 2fr, 1fr;
+
+  .reasons__title {
+    grid-column: span 3;
+  }
+
+  .reasons__items {
+    grid-column: span 3;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr, 2fr, 1fr;
+    grid-template-rows: 1fr;
 
-    .reasons__title {
-        grid-column: span 3;
+    .grid__item {
+      grid-column: 1 / 4;
+
+      @include tablet {
+        grid-column: span 1;
+      }
     }
 
-    .reasons__items {
-        grid-column: span 3;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 1fr;
-
-        .grid__item {
-            grid-column: 1 / 4;
-
-            @include tablet {
-                grid-column: span 1;
-            }
-        }
-
-        @include desktop {
-            margin: 0 85px;
-        }
+    @include desktop {
+      margin: 0 85px;
     }
+  }
 
-    .reasons__button {
-        grid-column: span 3;
-    }
+  .reasons__button {
+    grid-column: span 3;
+  }
 }
