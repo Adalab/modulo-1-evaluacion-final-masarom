@@ -57,5 +57,11 @@
     background-color: $white;
     border-radius: 50%;
     margin-bottom: 53px;
+    
   }
+  .animate__animated.animate__flipInX {
+      animation-name: flipInX;
+      animation-duration: 2s;
+      animation-iteration-count: 2;
+    }
 }
